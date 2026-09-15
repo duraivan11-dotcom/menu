@@ -166,26 +166,28 @@
           <p class="text-grey-7">Personas apasionadas comprometidas con la mejor calidad y servicio.</p>
         </div>
 
-        <div class="row q-col-gutter-lg justify-center">
+        <div class="row q-col-gutter-lg justify-center items-stretch">
           <div
             v-for="member in team"
             :key="member.name"
             class="col-12 col-sm-6 col-md-4"
           >
-            <q-card flat bordered class="team-card text-center card-rounded shadow-1">
+            <q-card flat bordered class="team-card text-center card-rounded shadow-1 full-height column justify-between">
               <q-img
                 :src="member.photo"
                 :alt="member.name"
-                height="300px"
+                height="280px"
                 fit="cover"
                 :img-style="{ objectPosition: member.objectPosition || 'center 10%' }"
               />
-              <q-card-section class="q-pa-md">
-                <q-badge color="amber-9" text-color="dark" class="q-mb-xs text-weight-bold">
-                  {{ member.role }}
-                </q-badge>
-                <div class="text-h6 text-weight-bold text-dark q-mt-xs">{{ member.name }}</div>
-                <div class="text-caption text-grey-7 q-mt-xs">{{ member.bio }}</div>
+              <q-card-section class="q-pa-md col grow column justify-between">
+                <div>
+                  <q-badge color="amber-9" text-color="dark" class="q-mb-xs text-weight-bold">
+                    {{ member.role }}
+                  </q-badge>
+                  <div class="text-h6 text-weight-bold text-dark q-mt-xs">{{ member.name }}</div>
+                </div>
+                <div class="text-caption text-grey-7 q-mt-sm">{{ member.bio }}</div>
               </q-card-section>
             </q-card>
           </div>
@@ -207,17 +209,17 @@ const team = [
   },
   {
     name: 'Sofia Ramírez',
-    role: 'Cajera & Atención al Cliente',
+    role: 'Atención al Cliente',
     photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=600&h=750&q=80',
     objectPosition: 'center 10%',
-    bio: 'Apasionada por brindar una sonrisa y la mejor atención rápida y amable a todos nuestros visitantes.'
+    bio: 'Apasionada por brindar la mejor atención rápida, amable y una sonrisa a todos los visitantes.'
   },
   {
     name: 'Mateo Gómez',
     role: 'Domiciliario Estrella',
     photo: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&h=750&q=80',
     objectPosition: 'center top',
-    bio: 'Encargado de que tus pedidos lleguen calientes, crujientes y a tiempo en cualquier rincón de la ciudad.'
+    bio: 'Encargado de que tus pedidos lleguen calientes, crujientes y a tiempo a cualquier rincón.'
   }
 ]
 </script>
